@@ -1,0 +1,72 @@
+﻿@model HotelManagement.webpages_UsersInRoles
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>webpages_UsersInRoles</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserProfile.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserProfile.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserProfile1.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserProfile1.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserProfile2.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserProfile2.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webpages_Roles.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webpages_Roles.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webpages_Roles1.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webpages_Roles1.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webpages_Roles2.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webpages_Roles2.RoleName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

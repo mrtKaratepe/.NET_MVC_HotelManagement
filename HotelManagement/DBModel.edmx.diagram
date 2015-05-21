@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21cf5c0ff60344b9a123c587951a6aaf" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelManagementModel.Booking" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.Guest" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.Hotel" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.Room" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.UserInformation" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.UserProfile" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.webpages_Membership" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.webpages_OAuthMembership" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.webpages_Roles" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.webpages_UsersInRoles" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="HotelManagementModel.FKBooking" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKBooking11716" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKBookingUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKGuest37242" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKUserInformation" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKGuest37555" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKUserProfileRole" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKGuest37999" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.FKwebpages_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

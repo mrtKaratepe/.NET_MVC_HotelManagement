@@ -1,0 +1,109 @@
+﻿@model IEnumerable<HotelManagement.Booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="wrapper">
+    <div class="aside maxheight">
+        <!-- box begin -->
+        <div class="box maxheight">
+            <div class="inner">
+                <h3>Reservation:</h3>
+                <label>Check In Date:</label>
+                <input type="date" name="inDate" /><br /><br />
+                <label>Check Out Date:</label>
+                <input type="date" name="outDate" /><br /><br /><br />
+
+                        <div class="button"><span><span><a href="#">Check Availability</a></span></span></div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- box end -->
+    </div>
+    <div class="content">
+        <div class="indent">
+
+            <h2>Index</h2>
+
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cost)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.InDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OutDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CustomerCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Room.Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hotel.HotelName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserProfile.Username)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cost)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OutDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CustomerCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Room.Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hotel.HotelName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserProfile.Username)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.BookingId }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.BookingId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.BookingId })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+            <br /><br />
+            <dl class="list1"><dd></dd></dl><br />
+            <h2>Our location</h2>
+            <img class="img-indent png" alt="" src="~/Content/five_star_hotel/images/5page-img1.png" />
+            <div class="extra-wrap">
+                <p class="alt-top">Our hotel is located in the most spectacular part of Prague - surrounded by boutiques, restaurants and luxurious shops. @ViewBag.Message</p>
+                <p>Please feel free to come visit us at the following adress:</p>
+                <dl class="contacts-list">
+                    <dt>Gazek st., 210</dt>
+                    <dd>1-800-412-4556</dd>
+                    <dd>1-800-542-6448</dd>
+                </dl>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

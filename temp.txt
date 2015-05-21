@@ -1,0 +1,14 @@
+/*
+        public ActionResult BookRoom()
+        {
+            var q=(from rm in db.Rooms
+                   join bk in db.Bookings on rm.RoomId equals bk.RoomId into t 
+                   from rt in t.DefaultIfEmpty() 
+                   orderby rm.RoomId select new {
+                    rm.RoomNumber,
+                    }).ToList();
+            IEnumerable<BookRoom> list = (IEnumerable<BookRoom>)q.GetEnumerator();
+            
+            return View(list);
+        }
+        */

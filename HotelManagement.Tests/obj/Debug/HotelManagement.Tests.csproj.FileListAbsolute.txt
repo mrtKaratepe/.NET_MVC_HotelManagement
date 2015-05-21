@@ -1,0 +1,62 @@
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.Tests.dll.config
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.Tests.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.Tests.pdb
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.pdb
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\obj\Debug\HotelManagement.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\obj\Debug\HotelManagement.Tests.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\obj\Debug\HotelManagement.Tests.pdb
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.Data.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.Data.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.Tests.dll.config
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.Tests.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.Tests.pdb
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.Data.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\HotelManagement.pdb
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\WebMatrix.Data.xml
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\obj\Debug\HotelManagement.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\obj\Debug\HotelManagement.Tests.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\obj\Debug\HotelManagement.Tests.pdb
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Mkayhanakdgn\Desktop\HotelManagement\HotelManagement.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Murat\Documents\Visual Studio 2013\Projects\HotelManagement\HotelManagement.Tests\bin\Debug\EntityFramework.xml

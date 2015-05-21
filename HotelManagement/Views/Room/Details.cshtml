@@ -1,0 +1,74 @@
+﻿@model HotelManagement.Room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.floorNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.floorNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bedsize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bedsize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NonSmoking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NonSmoking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BedCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BedCount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RoomId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

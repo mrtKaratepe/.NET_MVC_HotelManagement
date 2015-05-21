@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="BookingId" />
+    </Key>
+    <Property Name="BookingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Cost" Type="Single" />
+    <Property Name="InDate" Type="DateTime" Precision="3" />
+    <Property Name="OutDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomerCount" Type="Int32" Nullable="false" />
+    <Property Name="HotelId" Type="Int32" Nullable="false" />
+    <Property Name="RoomId" Type="Int32" />
+    <NavigationProperty Name="Room" Relationship="Self.FKBooking" FromRole="Booking" ToRole="Room" />
+    <NavigationProperty Name="Hotel" Relationship="Self.FKBooking11716" FromRole="Booking" ToRole="Hotel" />
+    <NavigationProperty Name="UserProfile" Relationship="Self.FKBookingUserId" FromRole="Booking" ToRole="UserProfile" />
+    <NavigationProperty Name="Guests" Relationship="Self.FKGuest37242" FromRole="Booking" ToRole="Guest" />
+  </EntityType>
+  <EntityType Name="Guest">
+    <Key>
+      <PropertyRef Name="GuestId" />
+    </Key>
+    <Property Name="GuestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BDate" Type="DateTime" Precision="3" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BookingBookingId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Booking" Relationship="Self.FKGuest37242" FromRole="Guest" ToRole="Booking" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="HotelId" />
+    </Key>
+    <Property Name="HotelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="TotalCapacity" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FKBooking11716" FromRole="Hotel" ToRole="Booking" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomNumber" Type="Int32" Nullable="false" />
+    <Property Name="floorNo" Type="Int32" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Bedsize" Type="Int32" />
+    <Property Name="NonSmoking" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BedCount" Type="Int32" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FKBooking" FromRole="Room" ToRole="Booking" />
+  </EntityType>
+  <EntityType Name="UserInformation">
+    <Key>
+      <PropertyRef Name="InformationId" />
+    </Key>
+    <Property Name="InformationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bday" Type="DateTime" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MaritalStatus" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserProfile" Relationship="Self.FKUserInformation" FromRole="UserInformations" ToRole="UserProfile" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FKBookingUserId" FromRole="UserProfile" ToRole="Booking" />
+    <NavigationProperty Name="UserInformations" Relationship="Self.FKUserInformation" FromRole="UserProfile" ToRole="UserInformations" />
+    <NavigationProperty Name="webpages_UsersInRoles" Relationship="Self.fk_UserId" FromRole="UserProfile" ToRole="webpages_UsersInRoles" />
+    <NavigationProperty Name="webpages_UsersInRoles1" Relationship="Self.FKGuest37555" FromRole="UserProfile" ToRole="webpages_UsersInRoles" />
+    <NavigationProperty Name="webpages_UsersInRoles2" Relationship="Self.FKUserProfileRole" FromRole="UserProfile" ToRole="webpages_UsersInRoles" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderUserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="webpages_UsersInRoles" Relationship="Self.fk_RoleId" FromRole="webpages_Roles" ToRole="webpages_UsersInRoles" />
+    <NavigationProperty Name="webpages_UsersInRoles1" Relationship="Self.FKGuest37999" FromRole="webpages_Roles" ToRole="webpages_UsersInRoles" />
+    <NavigationProperty Name="webpages_UsersInRoles2" Relationship="Self.FKwebpages_Roles" FromRole="webpages_Roles" ToRole="webpages_UsersInRoles" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile" Relationship="Self.fk_UserId" FromRole="webpages_UsersInRoles" ToRole="UserProfile" />
+    <NavigationProperty Name="UserProfile1" Relationship="Self.FKGuest37555" FromRole="webpages_UsersInRoles" ToRole="UserProfile" />
+    <NavigationProperty Name="UserProfile2" Relationship="Self.FKUserProfileRole" FromRole="webpages_UsersInRoles" ToRole="UserProfile" />
+    <NavigationProperty Name="webpages_Roles" Relationship="Self.fk_RoleId" FromRole="webpages_UsersInRoles" ToRole="webpages_Roles" />
+    <NavigationProperty Name="webpages_Roles1" Relationship="Self.FKGuest37999" FromRole="webpages_UsersInRoles" ToRole="webpages_Roles" />
+    <NavigationProperty Name="webpages_Roles2" Relationship="Self.FKwebpages_Roles" FromRole="webpages_UsersInRoles" ToRole="webpages_Roles" />
+  </EntityType>
+  <Association Name="FKBooking">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKBooking11716">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="HotelId" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="HotelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKBookingUserId">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGuest37242">
+    <End Role="Booking" Type="Self.Booking" Multiplicity="1" />
+    <End Role="Guest" Type="Self.Guest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Booking">
+        <PropertyRef Name="BookingId" />
+      </Principal>
+      <Dependent Role="Guest">
+        <PropertyRef Name="BookingBookingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUserInformation">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="UserInformations" Type="Self.UserInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserInformations">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGuest37555">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUserProfileRole">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGuest37999">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKwebpages_Roles">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HotelManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bookings" EntityType="Self.Booking" />
+    <EntitySet Name="Guests" EntityType="Self.Guest" />
+    <EntitySet Name="Hotels" EntityType="Self.Hotel" />
+    <EntitySet Name="Rooms" EntityType="Self.Room" />
+    <EntitySet Name="UserInformations" EntityType="Self.UserInformation" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" />
+    <AssociationSet Name="FKBooking" Association="Self.FKBooking">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FKBooking11716" Association="Self.FKBooking11716">
+      <End Role="Hotel" EntitySet="Hotels" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FKBookingUserId" Association="Self.FKBookingUserId">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FKGuest37242" Association="Self.FKGuest37242">
+      <End Role="Booking" EntitySet="Bookings" />
+      <End Role="Guest" EntitySet="Guests" />
+    </AssociationSet>
+    <AssociationSet Name="FKUserInformation" Association="Self.FKUserInformation">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserInformations" EntitySet="UserInformations" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="Self.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FKGuest37555" Association="Self.FKGuest37555">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FKUserProfileRole" Association="Self.FKUserProfileRole">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FKGuest37999" Association="Self.FKGuest37999">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FKwebpages_Roles" Association="Self.FKwebpages_Roles">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

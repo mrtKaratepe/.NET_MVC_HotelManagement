@@ -1,0 +1,23 @@
+﻿@using HotelManagement.Models
+@model Register
+
+@{
+    ViewBag.Title = "Register";
+}
+
+            <div id="sign_in" style="margin-left:350px;">
+                <div>
+                    <h2>Create New User</h2>
+                    @using (@Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken();
+                        @Html.ValidationSummary();
+                        <label>Enter Username</label><br />
+                        @Html.TextBoxFor(m => m.Username, new { @Class = "form-control" })<br /><br />
+                        <label>Enter Password</label><br />
+                        @Html.PasswordFor(m => m.Password, new { @Class = "form-control" })<br /><br />
+
+                        <button class="btn btn-primary">Create</button>
+                    }
+                </div>
+            </div>

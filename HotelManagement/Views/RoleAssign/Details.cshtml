@@ -1,0 +1,66 @@
+﻿@model HotelManagement.webpages_UsersInRoles
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>webpages_UsersInRoles</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserProfile.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserProfile.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserProfile1.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserProfile1.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserProfile2.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserProfile2.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webpages_Roles.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webpages_Roles.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webpages_Roles1.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webpages_Roles1.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webpages_Roles2.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webpages_Roles2.RoleName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

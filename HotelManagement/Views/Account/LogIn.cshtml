@@ -1,0 +1,69 @@
+﻿@using HotelManagement.Models
+@model Login
+
+@{
+    ViewBag.Title = "LogIn";
+}
+        
+<div id="sign_in" style="margin-left:350px;">
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="button" style="margin-left:-350px;"><span><span>@Html.ActionLink("Logout", "Logout", "Account")</span></span></div><br />
+        <strong>Username: </strong>
+        <label>@User.Identity.Name</label><br />
+
+        if (Roles.GetRolesForUser().Length > 0)
+        {
+            <strong>Access privilege Key: </strong>
+            <label>@Roles.GetRolesForUser()[0]</label><br />
+            if (@Roles.GetRolesForUser()[0] == "admin")
+            {
+                <br /><br />
+                <p style="font-style:italic">Admin List, You can manage your application from here...</p>
+                <div style="margin-left:-350px;">
+                    <div class="button"><span><span>@Html.ActionLink("Manage Users", "Index", "UserInformations")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("Manage Rooms", "Index", "Room")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("Manage Hotels", "Index", "HotelDefinition")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("Manage Roles", "Index", "RoleDefine")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("Add User to A Role", "Index", "RoleAssign")</span></span></div><br />
+                </div>
+            }else if (@Roles.GetRolesForUser()[0] == "user")
+            {
+                <br /><br />
+                <p style="font-style:italic">Manage List, You can manage your application from here...</p>
+                <div style="margin-left:-350px;">
+                    <div class="button"><span><span>@Html.ActionLink("Book A Room", "Index", "Booking")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("Manage Guests", "Index", "AddGuest")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("Update Profile", "create", "UserInformations")</span></span></div><br />
+                    <div class="button"><span><span>@Html.ActionLink("User Details", "Details", "UserInformations")</span></span></div><br />
+                </div>
+            }
+        }
+    }
+    else
+    {
+        <h2>Login</h2>
+        <p>Please Fill the required informations for log in...</p>
+    <div>
+        @using (@Html.BeginForm())
+        {
+            @Html.AntiForgeryToken();
+            @Html.ValidationSummary()
+            <label>Enter Username:  </label><br />
+            @Html.TextBoxFor(m => m.Username, new { @Class = "form-control" })<br /><br />
+            <label>Enter  Password: </label><br />
+            @Html.PasswordFor(m => m.Password, new { @Class = "form-control" })<br /><br />
+            <button  class="btn btn-primary" style="margin-left:40px;">Login</button>
+        }
+        <br /><br /><br />
+        <p>Don't you have an acount?</p>
+        <input type="button" value="Register" style="margin-left:40px;" onclick="location.href='@Url.Action("Register", "Account")'" />
+                    
+    </div>
+                    
+    }   <br /><br />
+                
+                
+</div>
+        

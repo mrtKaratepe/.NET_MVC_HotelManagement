@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HotelManagement.Room>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.floorNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bedsize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NonSmoking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.floorNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bedsize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NonSmoking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BedCount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoomId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RoomId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoomId })
+        </td>
+    </tr>
+}
+
+</table>

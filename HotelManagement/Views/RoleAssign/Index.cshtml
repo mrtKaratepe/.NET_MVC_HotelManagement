@@ -1,0 +1,60 @@
+﻿@model IEnumerable<HotelManagement.webpages_UsersInRoles>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserProfile.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserProfile1.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserProfile2.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.webpages_Roles.RoleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.webpages_Roles1.RoleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.webpages_Roles2.RoleName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserProfile.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserProfile1.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserProfile2.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.webpages_Roles.RoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.webpages_Roles1.RoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.webpages_Roles2.RoleName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
+        </td>
+    </tr>
+}
+
+</table>
